@@ -14,7 +14,7 @@ const HeroOne = () => {
         <div className="buttons">
           <Link
             className="sign-up"
-            href="/sign-up"
+            href="#"
           >
             Sign Up
           </Link>

@@ -2,7 +2,6 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
-  padding-top: 100px;
   z-index: 101;
 }
 .hero-one .left-side {
@@ -126,16 +125,27 @@ nav > ul {
   margin-left: 2%;
 }
 nav > ul > li {
-  margin: 5px;
+  margin: 10px;
 }
 nav > ul > li:last-child {
   padding-right: 15px;
 }
 nav > ul > li > a {
-  padding: 10px;
+  padding: 5px 0 2px 0;
   color: #243e63;
   font-weight: 600;
   font-size: 14px;
+  position: relative;
+  border-bottom: 2px solid transparent;
+}
+nav > ul > li > a:hover,
+nav > ul > li > a:active,
+nav > ul > li > a:focus {
+  border-bottom-color: #6415ff;
+}
+nav > ul > li > a.active {
+  color: #6415ff;
+  border-bottom: 2px solid #6415ff;
 }
 
 body {
@@ -166,4 +176,13 @@ a:active {
 
 img {
   width: 100%;
+}
+
+main {
+  padding-top: 100px;
+}
+@media screen and (max-width: 657px) {
+  main {
+    padding-top: 50px;
+  }
 }

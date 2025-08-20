@@ -1,11 +1,13 @@
 "use client";
-// import { useState } from "react";
-// import { usePathname } from "next/navigation";
-// import Image from "next/image";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { FaHotel } from "react-icons/fa";
 
 const NavBar = () => {
+  // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  let pathName = usePathname();
+
   const menu = [
     {
       label: "Home",
@@ -25,7 +27,7 @@ const NavBar = () => {
     },
     {
       label: "Login",
-      href: "/login",
+      href: "#",
     },
   ];
 
@@ -43,7 +45,12 @@ const NavBar = () => {
       <ul>
         {menu.map((item, index) => (
           <li key={index}>
-            <Link href={item.href}>{item.label}</Link>
+            <Link
+              href={item.href}
+              className={`${pathName === item.href ? "active" : ""}`}
+            >
+              {item.label}
+            </Link>
           </li>
         ))}
       </ul>

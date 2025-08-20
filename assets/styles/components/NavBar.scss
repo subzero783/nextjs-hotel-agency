@@ -40,15 +40,26 @@ nav {
         flex-flow: row nowrap;
         margin-left: 2%;
         > li {
-            margin: 5px;
+            margin: 10px;
             &:last-child {
                 padding-right: 15px;
             }
             > a {
-                padding: 10px;
+                padding: 5px 0 2px 0;
                 color: $primary-color;
                 font-weight: 600;
                 font-size: 14px;
+                position: relative;
+                border-bottom: 2px solid transparent;
+                &:hover,
+                &:active,
+                &:focus {
+                    border-bottom-color: $secondary-color;
+                }
+                &.active {
+                    color: $secondary-color;
+                    border-bottom: 2px solid $secondary-color;
+                }
             }
         }
     }
