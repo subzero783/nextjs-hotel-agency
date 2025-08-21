@@ -91,12 +91,6 @@ nav {
   padding: 15px 32px 0 2%;
   background-color: #fff;
 }
-@media screen and (max-width: 657px) {
-  nav {
-    position: relative;
-    flex-flow: column nowrap;
-  }
-}
 nav .logo {
   display: flex;
   flex-flow: row nowrap;
@@ -147,6 +141,65 @@ nav > ul > li > a.active {
   color: #6415ff;
   border-bottom: 2px solid #6415ff;
 }
+nav .menu-bars-container {
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  padding: 10px;
+  border: 1px solid #6415ff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+nav .menu-bars-container:hover,
+nav .menu-bars-container:active,
+nav .menu-bars-container:focus {
+  background-color: #e2e8f0;
+  border: 1px solid #243e63;
+}
+nav .menu-bars-container:hover > svg,
+nav .menu-bars-container:active > svg,
+nav .menu-bars-container:focus > svg {
+  color: #243e63;
+}
+nav .menu-bars-container > svg {
+  color: #6415ff;
+}
+@media screen and (max-width: 657px) {
+  nav {
+    position: relative;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 0 15px 5px;
+    margin-right: 0;
+    border-bottom: 1px solid #cbd5e0;
+  }
+  nav .logo {
+    width: 50%;
+    margin-right: auto;
+  }
+  nav .logo .logo-image {
+    margin-bottom: 0;
+  }
+  nav > ul {
+    flex-flow: column nowrap;
+    width: 100%;
+    margin-left: 0;
+    display: none;
+  }
+  nav > ul.active {
+    display: block;
+  }
+  nav > ul > li {
+    margin: 5px 0;
+  }
+  nav > ul > li > a {
+    display: block;
+  }
+  nav .menu-bars-container {
+    display: block;
+  }
+}
 
 body {
   font-family: "Inter", sans-serif;
@@ -180,6 +233,7 @@ img {
 
 main {
   padding-top: 100px;
+  padding-bottom: 50px;
 }
 @media screen and (max-width: 657px) {
   main {

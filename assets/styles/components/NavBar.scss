@@ -9,21 +9,25 @@ nav {
     margin-left: 0;
     padding: 15px 32px 0 2%;
     background-color: #fff;
+
     .logo {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
+
         .logo-image {
             margin-right: 10px;
             margin-bottom: 10px;
             color: $secondary-color;
             font-size: 40px;
         }
+
         .logo-text {
             font-weight: 900;
             font-size: 24px;
             font-family: $primary-font;
             color: $primary-color;
+
             &:hover,
             &:active,
             &:focus {
@@ -31,15 +35,19 @@ nav {
             }
         }
     }
+
     > ul {
         display: flex;
         flex-flow: row nowrap;
         margin-left: 2%;
+
         > li {
             margin: 10px;
+
             &:last-child {
                 padding-right: 15px;
             }
+
             > a {
                 padding: 5px 0 2px 0;
                 color: $primary-color;
@@ -47,11 +55,13 @@ nav {
                 font-size: 14px;
                 position: relative;
                 border-bottom: 2px solid transparent;
+
                 &:hover,
                 &:active,
                 &:focus {
                     border-bottom-color: $secondary-color;
                 }
+
                 &.active {
                     color: $secondary-color;
                     border-bottom: 2px solid $secondary-color;
@@ -59,6 +69,7 @@ nav {
             }
         }
     }
+
     .menu-bars-container {
         display: none;
         position: absolute;
@@ -68,19 +79,23 @@ nav {
         border: 1px solid $secondary-color;
         border-radius: 5px;
         cursor: pointer;
+
         &:hover,
         &:active,
         &:focus {
             background-color: $gray-color-one;
             border: 1px solid $primary-color;
+
             > svg {
                 color: $primary-color;
             }
         }
+
         > svg {
             color: $secondary-color;
         }
     }
+
     @media screen and (max-width: 657px) {
         position: relative;
         flex-flow: column wrap;
@@ -88,28 +103,35 @@ nav {
         padding: 0 15px 5px;
         margin-right: 0;
         border-bottom: 1px solid $gray-color-two;
+
         .logo {
             width: 50%;
             margin-right: auto;
+
             .logo-image {
                 margin-bottom: 0;
             }
         }
+
         > ul {
             flex-flow: column nowrap;
             width: 100%;
             margin-left: 0;
             display: none;
+
             &.active {
                 display: block;
             }
+
             > li {
                 margin: 5px 0;
+
                 > a {
                     display: block;
                 }
             }
         }
+
         .menu-bars-container {
             display: block;
         }
