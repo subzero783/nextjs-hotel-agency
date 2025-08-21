@@ -6,6 +6,7 @@ import { FaHotel, FaBars } from "react-icons/fa";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   let pathName = usePathname();
 
@@ -25,10 +26,6 @@ const NavBar = () => {
     {
       label: "Hotels",
       href: "/hotels",
-    },
-    {
-      label: "Login",
-      href: "#",
     },
   ];
 
@@ -54,6 +51,16 @@ const NavBar = () => {
             </Link>
           </li>
         ))}
+        {!isLoggedIn && (
+          <li>
+            <button
+              href="#"
+              className="login-register"
+            >
+              <span>Login or Register</span>
+            </button>
+          </li>
+        )}
       </ul>
       <div
         className="menu-bars-container"
