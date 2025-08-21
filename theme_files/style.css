@@ -4,15 +4,23 @@
   align-items: flex-start;
   z-index: 101;
 }
+@media screen and (max-width: 768px) {
+  .hero-one {
+    padding: 0 15px;
+    flex-flow: column nowrap;
+  }
+}
 .hero-one .left-side {
   min-width: 560px;
   padding: 60px 0 32px 2%;
 }
-@media screen and (max-width: 657px) {
+@media screen and (max-width: 768px) {
   .hero-one .left-side {
     min-width: unset;
     width: 100%;
     padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 60px;
   }
 }
 .hero-one .left-side h1,
@@ -21,6 +29,12 @@
   font-weight: 900;
   color: #243e63;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .hero-one .left-side h1,
+  .hero-one .left-side .h1 {
+    font-size: 30px;
+  }
 }
 .hero-one .left-side h1 > div:nth-child(2),
 .hero-one .left-side .h1 > div:nth-child(2) {
@@ -31,10 +45,21 @@
   line-height: 32px;
   margin-bottom: 32px;
 }
+@media screen and (max-width: 768px) {
+  .hero-one .left-side p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
 .hero-one .left-side .buttons {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+}
+@media screen and (max-width: 576px) {
+  .hero-one .left-side .buttons {
+    flex-flow: column nowrap;
+  }
 }
 .hero-one .left-side .buttons a {
   width: 30%;
@@ -47,6 +72,15 @@
   color: #fff;
   background-color: #6415ff;
   margin-right: 20px;
+}
+@media screen and (max-width: 576px) {
+  .hero-one .left-side .buttons a {
+    margin-right: 0;
+    width: 100%;
+  }
+  .hero-one .left-side .buttons a:first-child {
+    margin-bottom: 20px;
+  }
 }
 .hero-one .left-side .buttons a:hover,
 .hero-one .left-side .buttons a:active,
@@ -74,9 +108,11 @@
   background-size: cover;
   background-position: center center;
 }
-@media screen and (max-width: 657px) {
+@media screen and (max-width: 768px) {
   .hero-one .hero-image {
-    display: none;
+    height: 360px;
+    margin-top: 0;
+    margin-left: 0;
   }
 }
 
@@ -90,12 +126,6 @@ nav {
   margin-left: 0;
   padding: 15px 32px 0 2%;
   background-color: #fff;
-}
-@media screen and (max-width: 657px) {
-  nav {
-    position: relative;
-    flex-flow: column nowrap;
-  }
 }
 nav .logo {
   display: flex;
@@ -122,6 +152,7 @@ nav .logo .logo-text:focus {
 nav > ul {
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
   margin-left: 2%;
 }
 nav > ul > li {
@@ -147,6 +178,82 @@ nav > ul > li > a.active {
   color: #6415ff;
   border-bottom: 2px solid #6415ff;
 }
+nav > ul > li > .login-register {
+  border: unset;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #243e63;
+  background-color: #e2e8f0;
+}
+nav > ul > li > .login-register:hover,
+nav > ul > li > .login-register:active,
+nav > ul > li > .login-register:focus {
+  background-color: #cbd5e0;
+}
+nav .menu-bars-container {
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  padding: 10px;
+  border: 1px solid #6415ff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+nav .menu-bars-container:hover,
+nav .menu-bars-container:active,
+nav .menu-bars-container:focus {
+  background-color: #e2e8f0;
+  border: 1px solid #243e63;
+}
+nav .menu-bars-container:hover > svg,
+nav .menu-bars-container:active > svg,
+nav .menu-bars-container:focus > svg {
+  color: #243e63;
+}
+nav .menu-bars-container > svg {
+  color: #6415ff;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    position: relative;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 0 15px 5px;
+    margin-right: 0;
+    border-bottom: 1px solid #cbd5e0;
+  }
+  nav .logo {
+    width: 50%;
+    margin-right: auto;
+  }
+  nav .logo .logo-image {
+    margin-bottom: 0;
+  }
+  nav > ul {
+    flex-flow: column nowrap;
+    width: 100%;
+    margin-left: 0;
+    display: none;
+  }
+  nav > ul.active {
+    display: block;
+  }
+  nav > ul > li {
+    margin: 5px 0;
+  }
+  nav > ul > li > a {
+    display: block;
+  }
+  nav > ul > li:last-child {
+    padding-right: unset;
+  }
+  nav .menu-bars-container {
+    display: block;
+  }
+}
 
 body {
   font-family: "Inter", sans-serif;
@@ -156,6 +263,7 @@ p {
   line-height: 21px;
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 
 ul {
@@ -180,6 +288,7 @@ img {
 
 main {
   padding-top: 100px;
+  padding-bottom: 50px;
 }
 @media screen and (max-width: 657px) {
   main {
