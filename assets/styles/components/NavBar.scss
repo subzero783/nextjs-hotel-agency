@@ -9,10 +9,6 @@ nav {
     margin-left: 0;
     padding: 15px 32px 0 2%;
     background-color: #fff;
-    @media screen and (max-width: 657px) {
-        position: relative;
-        flex-flow: column nowrap;
-    }
     .logo {
         display: flex;
         flex-flow: row nowrap;
@@ -61,6 +57,61 @@ nav {
                     border-bottom: 2px solid $secondary-color;
                 }
             }
+        }
+    }
+    .menu-bars-container {
+        display: none;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        padding: 10px;
+        border: 1px solid $secondary-color;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $gray-color-one;
+            border: 1px solid $primary-color;
+            > svg {
+                color: $primary-color;
+            }
+        }
+        > svg {
+            color: $secondary-color;
+        }
+    }
+    @media screen and (max-width: 657px) {
+        position: relative;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        padding: 0 15px 5px;
+        margin-right: 0;
+        border-bottom: 1px solid $gray-color-two;
+        .logo {
+            width: 50%;
+            margin-right: auto;
+            .logo-image {
+                margin-bottom: 0;
+            }
+        }
+        > ul {
+            flex-flow: column nowrap;
+            width: 100%;
+            margin-left: 0;
+            display: none;
+            &.active {
+                display: block;
+            }
+            > li {
+                margin: 5px 0;
+                > a {
+                    display: block;
+                }
+            }
+        }
+        .menu-bars-container {
+            display: block;
         }
     }
 }

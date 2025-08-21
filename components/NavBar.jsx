@@ -1,10 +1,11 @@
 "use client";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { FaHotel } from "react-icons/fa";
+import { FaHotel, FaBars } from "react-icons/fa";
 
 const NavBar = () => {
-  // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   let pathName = usePathname();
 
@@ -42,7 +43,7 @@ const NavBar = () => {
         </span>
         <span className="logo-text">Treact</span>
       </Link>
-      <ul>
+      <ul className={isMobileMenuOpen === true ? "active" : ""}>
         {menu.map((item, index) => (
           <li key={index}>
             <Link
@@ -54,6 +55,12 @@ const NavBar = () => {
           </li>
         ))}
       </ul>
+      <div
+        className="menu-bars-container"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      >
+        <FaBars className="menu-bars" />
+      </div>
     </nav>
   );
 };
