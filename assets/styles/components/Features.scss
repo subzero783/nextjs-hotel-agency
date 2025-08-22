@@ -1,0 +1,60 @@
+.features-section {
+    > .container {
+        padding: 100px 0;
+        max-width: 1100px;
+        @media screen and (max-width: 768px) {
+            padding: 60px 0;
+        }
+        > .row {
+            @media screen and (max-width: 768px) {
+                flex-flow: column nowrap;
+                > .col {
+                    margin-bottom: 40px;
+                }
+            }
+            > .col {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+            }
+            > .col > .icon {
+                background-color: $gray-color-three;
+                padding: 15px;
+                border-radius: 100%;
+            }
+            > .col > .icon > svg {
+                color: $secondary-color;
+                font-size: 25px;
+            }
+            > .col > .title {
+                font-size: 16px;
+                color: $primary-color;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                font-size: 20px;
+                font-weight: 700;
+            }
+            > .col > .subtitle {
+                font-size: 14px;
+                font-weight: 500;
+                text-align: center;
+                color: $primary-color-two;
+                max-width: 300px;
+            }
+            > .col > a {
+                padding-top: 15px;
+                color: $secondary-color;
+                font-size: 16px;
+                font-weight: 600;
+                &:hover,
+                &:active,
+                &:focus {
+                    color: $secondary-color-hover;
+                }
+            }
+            > .col > a > svg {
+                font-size: 28px;
+            }
+        }
+    }
+}
