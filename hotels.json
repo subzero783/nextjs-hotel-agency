@@ -1,0 +1,242 @@
+[
+  {
+    "_id": "1",
+    "owner": "1",
+    "name": "Wyatt Residency",
+    "type": "Hotel",
+    "description": "Experience timeless elegance at the Wyatt Residency, located in the heart of historic Rome. Our luxurious rooms and world-class service provide an unforgettable stay.",
+    "location": {
+      "street": "Via del Corso, 1",
+      "city": "Rome",
+      "country": "Italy"
+    },
+    "star_rating": 4.8,
+    "amenities": ["Wifi", "Room Service", "Concierge", "Free Breakfast", "Hot Tub", "24/7 Security", "Wheelchair Accessible", "Elevator Access", "Gym/Fitness Center", "Air Conditioning", "Smart TV", "On-site Restaurant"],
+    "price_per_night": 350,
+    "contact_info": {
+      "name": "Marco Rossi",
+      "email": "contact@wyattresidency.it",
+      "phone": "+39 06 1234 5678"
+    },
+    "images": ["rome_hotel_1.jpeg", "rome_hotel_2.jpeg", "rome_hotel_3.jpeg"],
+    "is_featured": true,
+    "createdAt": "2024-02-15T00:00:00.000Z",
+    "updatedAt": "2024-02-15T00:00:00.000Z"
+  },
+  {
+    "_id": "2",
+    "owner": "1",
+    "name": "The Parisian Dream",
+    "type": "Hotel",
+    "description": "A charming boutique hotel with stunning views of the Eiffel Tower. Perfect for a romantic getaway in the city of lights.",
+    "location": {
+      "street": "25 Rue de Monttessuy",
+      "city": "Paris",
+      "country": "France"
+    },
+    "star_rating": 4.5,
+    "amenities": ["Wifi", "Balcony/Patio", "Room Service", "Air Conditioning", "Smart TV", "Coffee Maker"],
+    "price_per_night": 275,
+    "contact_info": {
+      "name": "Juliette Dubois",
+      "email": "info@parisiandream.fr",
+      "phone": "+33 1 23 45 67 89"
+    },
+    "images": ["paris_hotel_1.jpeg", "paris_hotel_2.jpeg", "paris_hotel_3.jpeg"],
+    "is_featured": false,
+    "createdAt": "2024-03-10T00:00:00.000Z",
+    "updatedAt": "2024-03-10T00:00:00.000Z"
+  },
+  {
+    "_id": "3",
+    "owner": "2",
+    "name": "Tokyo Grand Hotel",
+    "type": "Hotel",
+    "description": "A modern hotel offering a serene escape amidst the bustling city of Tokyo. Features a rooftop pool and spa.",
+    "location": {
+      "street": "1-1-1 Shinjuku",
+      "city": "Tokyo",
+      "country": "Japan"
+    },
+    "star_rating": 5.0,
+    "amenities": ["Wifi", "Swimming Pool", "Gym/Fitness Center", "On-site Restaurant", "Spa", "24/7 Security", "Elevator Access"],
+    "price_per_night": 450,
+    "contact_info": {
+      "name": "Ken Tanaka",
+      "email": "reservations@tokyogrand.jp",
+      "phone": "+81 3-1234-5678"
+    },
+    "images": ["tokyo_hotel_1.jpg", "tokyo_hotel_2.jpg", "tokyo_hotel_3.jpg"],
+    "is_featured": true,
+    "createdAt": "2024-04-20T00:00:00.000Z",
+    "updatedAt": "2024-04-20T00:00:00.000Z"
+  },
+  {
+    "_id": "4",
+    "owner": "2",
+    "name": "Sydney Harbour View",
+    "type": "Hotel",
+    "description": "Wake up to breathtaking views of the Sydney Opera House and Harbour Bridge. A truly iconic Australian experience.",
+    "location": {
+      "street": "100 Circular Quay",
+      "city": "Sydney",
+      "country": "Australia"
+    },
+    "star_rating": 4.7,
+    "amenities": ["Wifi", "Ocean View", "Swimming Pool", "Room Service", "Gym/Fitness Center", "Balcony/Patio"],
+    "price_per_night": 400,
+    "contact_info": {
+      "name": "Chloe Williams",
+      "email": "stay@sydneyharbourview.com.au",
+      "phone": "+61 2 9876 5432"
+    },
+    "images": ["sydney_hotel_1.jpg", "sydney_hotel_2.jpg", "sydney_hotel_3.jpg"],
+    "is_featured": false,
+    "createdAt": "2024-05-05T00:00:00.000Z",
+    "updatedAt": "2024-05-05T00:00:00.000Z"
+  },
+  {
+    "_id": "5",
+    "owner": "3",
+    "name": "Nile Serenity Hotel",
+    "type": "Hotel",
+    "description": "Discover the magic of ancient Egypt with a luxurious stay on the banks of the Nile. Close to major historical sites.",
+    "location": {
+      "street": "55 Corniche El Nil",
+      "city": "Cairo",
+      "country": "Egypt"
+    },
+    "star_rating": 4.2,
+    "amenities": ["Wifi", "Swimming Pool", "On-site Restaurant", "Tour Desk", "Air Conditioning", "River View"],
+    "price_per_night": 180,
+    "contact_info": {
+      "name": "Ahmed Hassan",
+      "email": "booking@nileserenity.eg",
+      "phone": "+20 2 2345 6789"
+    },
+    "images": ["cairo_hotel_1.jpg", "cairo_hotel_2.jpg", "cairo_hotel_3.jpg"],
+    "is_featured": false,
+    "createdAt": "2024-06-18T00:00:00.000Z",
+    "updatedAt": "2024-06-18T00:00:00.000Z"
+  },
+  {
+    "_id": "6",
+    "owner": "3",
+    "name": "The Londoner Royal",
+    "type": "Hotel",
+    "description": "A quintessential London hotel offering classic British charm and modern amenities in the heart of Kensington.",
+    "location": {
+      "street": "15 Queen's Gate",
+      "city": "London",
+      "country": "United Kingdom"
+    },
+    "star_rating": 4.9,
+    "amenities": ["Wifi", "Room Service", "Concierge", "Afternoon Tea", "24/7 Security", "Gym/Fitness Center", "Air Conditioning"],
+    "price_per_night": 420,
+    "contact_info": {
+      "name": "Arthur Pendelton",
+      "email": "reservations@londonerroyal.co.uk",
+      "phone": "+44 20 7123 4567"
+    },
+    "images": ["london_hotel_1.jpg", "london_hotel_2.jpg", "london_hotel_3.jpg"],
+    "is_featured": true,
+    "createdAt": "2024-07-22T00:00:00.000Z",
+    "updatedAt": "2024-07-22T00:00:00.000Z"
+  },
+  {
+    "_id": "7",
+    "owner": "4",
+    "name": "Rio Beachfront Oasis",
+    "type": "Resort",
+    "description": "Enjoy the sun, sand, and samba at our vibrant beachfront resort on Copacabana Beach.",
+    "location": {
+      "street": "Avenida Atlântica, 1702",
+      "city": "Rio de Janeiro",
+      "country": "Brazil"
+    },
+    "star_rating": 4.6,
+    "amenities": ["Wifi", "Beach Access", "Swimming Pool", "On-site Restaurant", "Balcony/Patio", "Air Conditioning"],
+    "price_per_night": 300,
+    "contact_info": {
+      "name": "Isabella Costa",
+      "email": "contact@rio-oasis.com.br",
+      "phone": "+55 21 98765-4321"
+    },
+    "images": ["rio_hotel_1.jpg", "rio_hotel_2.jpg", "rio_hotel_3.jpg"],
+    "is_featured": false,
+    "createdAt": "2024-08-01T00:00:00.000Z",
+    "updatedAt": "2024-08-01T00:00:00.000Z"
+  },
+  {
+    "_id": "8",
+    "owner": "4",
+    "name": "Dubai Modern Spire",
+    "type": "Hotel",
+    "description": "Experience unparalleled luxury and futuristic design in the heart of Dubai's skyline.",
+    "location": {
+      "street": "1 Sheikh Mohammed bin Rashid Blvd",
+      "city": "Dubai",
+      "country": "United Arab Emirates"
+    },
+    "star_rating": 5.0,
+    "amenities": ["Wifi", "Infinity Pool", "Spa", "Valet Parking", "On-site Restaurant", "Gym/Fitness Center", "24/7 Security"],
+    "price_per_night": 600,
+    "contact_info": {
+      "name": "Rashid Al Maktoum",
+      "email": "info@dubaispire.ae",
+      "phone": "+971 4 123 4567"
+    },
+    "images": ["dubai_hotel_1.jpg", "dubai_hotel_2.jpg", "dubai_hotel_3.jpg"],
+    "is_featured": true,
+    "createdAt": "2024-09-15T00:00:00.000Z",
+    "updatedAt": "2024-09-15T00:00:00.000Z"
+  },
+  {
+    "_id": "9",
+    "owner": "5",
+    "name": "Bangkok City Temple",
+    "type": "Hotel",
+    "description": "A tranquil oasis in the vibrant city of Bangkok, blending traditional Thai architecture with modern comfort.",
+    "location": {
+      "street": "123 Sukhumvit Road",
+      "city": "Bangkok",
+      "country": "Thailand"
+    },
+    "star_rating": 4.4,
+    "amenities": ["Wifi", "Swimming Pool", "Traditional Thai Spa", "On-site Restaurant", "Cooking Classes", "Air Conditioning"],
+    "price_per_night": 220,
+    "contact_info": {
+      "name": "Malee Srisuk",
+      "email": "stay@bkkcitytemple.th",
+      "phone": "+66 2 123 4567"
+    },
+    "images": ["bangkok_hotel_1.jpg", "bangkok_hotel_2.jpg", "bangkok_hotel_3.jpg"],
+    "is_featured": false,
+    "createdAt": "2024-10-10T00:00:00.000Z",
+    "updatedAt": "2024-10-10T00:00:00.000Z"
+  },
+  {
+    "_id": "10",
+    "owner": "5",
+    "name": "The Manhattan Sky",
+    "type": "Hotel",
+    "description": "Soar above the city in our iconic skyscraper hotel, offering panoramic views of the Manhattan skyline.",
+    "location": {
+      "street": "350 Fifth Avenue",
+      "city": "New York",
+      "country": "USA"
+    },
+    "star_rating": 4.8,
+    "amenities": ["Wifi", "Room Service", "Concierge", "Rooftop Bar", "Gym/Fitness Center", "Elevator Access", "24/7 Security"],
+    "price_per_night": 550,
+    "contact_info": {
+      "name": "Michael Chen",
+      "email": "guestservices@manhattansky.com",
+      "phone": "+1 212-555-0199"
+    },
+    "images": ["nyc_hotel_1.jpg", "nyc_hotel_2.jpg", "nyc_hotel_3.jpg"],
+    "is_featured": true,
+    "createdAt": "2024-11-20T00:00:00.000Z",
+    "updatedAt": "2024-11-20T00:00:00.000Z"
+  }
+]
