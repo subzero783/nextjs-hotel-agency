@@ -43,5 +43,6 @@ next-env.d.ts
 # images
 *.png
 *.jpg
+*.jpeg
 *.svg
 *.webp
