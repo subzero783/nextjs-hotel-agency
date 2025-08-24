@@ -1,12 +1,13 @@
 "use client";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { FaHotel, FaBars } from "react-icons/fa";
+import StateContext from "./StateContext";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { isLoggedIn } = useContext(StateContext);
 
   let pathName = usePathname();
 

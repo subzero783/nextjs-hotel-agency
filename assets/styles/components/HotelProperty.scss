@@ -1,0 +1,163 @@
+.hotel-property {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+
+    > div.image-container {
+        position: relative;
+        overflow: hidden;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        > img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.7s;
+            z-index: 0;
+
+            &:hover,
+            &:active,
+            &:focus {
+                transform: scale(1.3);
+            }
+        }
+
+        > .like-hotel-container {
+            position: absolute;
+            z-index: 1;
+            top: 4px;
+            right: 4px;
+            border-radius: 100%;
+            background-color: $gray-color-one;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            &:hover,
+            &:active,
+            &:focus,
+            &.liked {
+                background-color: $secondary-color;
+                > svg {
+                    color: #fff;
+                }
+            }
+            > svg {
+                position: relative;
+                top: 50%;
+                left: 50%;
+                font-size: 12px;
+                display: block;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    > .text-container {
+        padding: 0 10px 10px 10px;
+
+        > .hotel-link {
+            > .type {
+                font-size: 14px;
+                color: $primary-color-two;
+                font-weight: 500;
+                padding-top: 15px;
+            }
+
+            > h2 {
+                font-size: 20px;
+                font-weight: 500;
+                color: $primary-color;
+                margin-bottom: 10px;
+
+                > span {
+                    background-image: linear-gradient(transparent 24px, black 20px);
+                    background-size: 0;
+                    background-repeat: no-repeat;
+                    transition: background-size 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+                    padding-bottom: 2px;
+                }
+            }
+
+            &:hover,
+            &:active,
+            &:focus {
+                > h2 > span {
+                    background-size: 100%;
+                }
+            }
+        }
+
+        > h3 {
+            font-size: 14px;
+            color: $primary-color-two;
+            font-weight: 500;
+        }
+
+        > .rating-and-details {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+
+            > .stars-and-rating {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+
+                > .stars {
+                    width: 35px;
+                    height: 35px;
+                    background-color: $secondary-color;
+                    border-radius: 5px;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    align-items: center;
+
+                    > span {
+                        color: #fff;
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+
+                > .rating {
+                    font-size: 14px;
+                    color: $primary-color-two;
+                    font-weight: 600;
+                    margin-left: 5px;
+                }
+            }
+
+            > .details {
+                background-color: $secondary-color;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 600;
+                padding: 10px 10px;
+                border-radius: 5px;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    background-color: $secondary-color-hover;
+                }
+            }
+        }
+
+        > .price-container {
+            margin: 5px 0;
+
+            > p {
+                font-size: 14px;
+                font-weight: 600;
+                color: $primary-color-two;
+
+                > span {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}
