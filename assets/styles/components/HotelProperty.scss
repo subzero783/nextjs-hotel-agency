@@ -32,15 +32,18 @@
             height: 30px;
             cursor: pointer;
             transition: all 0.3s ease-in-out;
+
             &:hover,
             &:active,
             &:focus,
             &.liked {
                 background-color: $secondary-color;
+
                 > svg {
                     color: #fff;
                 }
             }
+
             > svg {
                 position: relative;
                 top: 50%;

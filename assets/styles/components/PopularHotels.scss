@@ -1,5 +1,6 @@
 .popular-hotels {
     max-width: 1200px;
+
     > .row {
         &:nth-child(1) {
             margin-bottom: 40px;
@@ -7,16 +8,19 @@
             flex-flow: row nowrap;
             align-items: center;
             justify-content: space-between;
+
             .title {
                 font-size: 26px;
                 font-weight: 900;
                 color: #243e63;
             }
+
             .hotel-types-buttons {
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: flex-end;
             }
+
             .type-button {
                 background-color: $secondary-color;
                 color: #fff;
@@ -38,6 +42,7 @@
                 }
             }
         }
+
         &:nth-child(2) {
             > .col {
                 margin-bottom: 40px;
