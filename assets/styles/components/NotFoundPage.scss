@@ -1,0 +1,48 @@
+.not-found {
+    margin-top: -100px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    min-height: 99vh;
+    background-color: $blue-color;
+    .container {
+        max-width: 800px;
+    }
+    .col {
+        padding: 60px 15px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.4);
+        background-color: #fff;
+        > svg {
+            color: #ffc107;
+            font-size: 70px;
+            padding-bottom: 20px;
+        }
+        > h1 {
+            font-weight: 700;
+            padding-bottom: 10px;
+        }
+        > p {
+            padding-bottom: 40px;
+        }
+        a {
+            background-color: $secondary-color;
+            color: #fff;
+            padding: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            font-size: 16px;
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: $secondary-color-hover;
+            }
+        }
+    }
+}

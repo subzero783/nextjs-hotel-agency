@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { FaHotel, FaBars } from "react-icons/fa";
-import StateContext from "./StateContext";
+import StateContext from "@/components/StateContext";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

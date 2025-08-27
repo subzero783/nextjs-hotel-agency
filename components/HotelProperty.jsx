@@ -5,11 +5,11 @@ import Link from "next/link";
 import { MdHotel } from "react-icons/md";
 import { FaUmbrellaBeach } from "react-icons/fa";
 import { FaRegHeart, FaHeart } from "react-icons/fa6";
-import StateContextProvider from "./StateContext";
+import StateContext from "@/components/StateContext";
 
 const HotelProperty = ({ hotel }) => {
   const [like, setLike] = useState(false);
-  const { isLoggedIn } = useContext(StateContextProvider);
+  const { isLoggedIn } = useContext(StateContext);
 
   const getTypeIcon = (type) => {
     if (type.toLowerCase() === "hotel") {

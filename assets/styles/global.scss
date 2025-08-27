@@ -6,6 +6,7 @@
 @import "@/assets/styles/components/Features";
 @import "@/assets/styles/components/PopularHotels";
 @import "@/assets/styles/components/HotelProperty";
+@import "@/assets/styles/components/NotFoundPage";
 
 // Global styles
 body {
@@ -38,13 +39,4 @@ a {
 
 img {
     width: 100%;
-}
-
-main {
-    padding-top: 100px;
-    padding-bottom: 50px;
-
-    @media screen and (max-width: 657px) {
-        padding-top: 50px;
-    }
 }

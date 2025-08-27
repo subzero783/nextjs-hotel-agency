@@ -3,10 +3,12 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;
+    padding-top: 100px;
     z-index: 101;
+    background-color: $blue-color;
 
     @media screen and (max-width: 768px) {
-        padding: 0 15px;
+        padding: 50px 15px 0;
         flex-flow: column nowrap;
     }
 
