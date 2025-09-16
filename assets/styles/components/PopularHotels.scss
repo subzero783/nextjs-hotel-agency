@@ -14,33 +14,6 @@
                 font-weight: 900;
                 color: #243e63;
             }
-
-            .hotel-types-buttons {
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: flex-end;
-            }
-
-            .type-button {
-                background-color: $secondary-color;
-                color: #fff;
-                font-size: 14px;
-                font-weight: 600;
-                padding: 10px 10px;
-                border-radius: 5px;
-                border: unset;
-                margin-right: 5px;
-
-                &:hover,
-                &:active,
-                &:focus {
-                    background-color: $secondary-color-hover;
-                }
-
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
         }
 
         &:nth-child(2) {

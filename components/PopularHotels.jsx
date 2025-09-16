@@ -1,6 +1,6 @@
-"use client";
 import { Col, Container, Row } from "react-bootstrap";
 import HotelProperty from "@/components/HotelProperty";
+import HotelFilterButtons from "./HotelFilterButtons";
 import { fetchHotels } from "@/utils/requests";
 
 const PopularHotels = async ({ searchParams }) => {
@@ -12,7 +12,7 @@ const PopularHotels = async ({ searchParams }) => {
   const typesHotels = ["All", ...new Set(hotels.map((item) => item.type))];
   // 3. This line creates our array of unique hotel types for the filter buttons, directly from the live data.
 
-  const selectedType = searchParams.type || "All";
+  const selectedType = (await searchParams.type) || "All";
   // 4. We check the URL to see if a filter is active.
 
   const filteredHotels = selectedType === "All" ? hotels : hotels.filter((hotel) => hotel.type === selectedType);
@@ -20,6 +20,7 @@ const PopularHotels = async ({ searchParams }) => {
 
   return (
     <Container
+      id="popular-hotels"
       className="popular-hotels"
       fluid
     >
@@ -28,17 +29,7 @@ const PopularHotels = async ({ searchParams }) => {
           <h2 className="title">Popular Hotels</h2>
         </Col>
         <Col className="hotel-types-buttons">
-          {typesHotels.map((item, index) => (
-            <button
-              className="type-button"
-              key={index}
-              onClick={() => {
-                getHotelList(item);
-              }}
-            >
-              {item}
-            </button>
-          ))}
+          <HotelFilterButtons types={typesHotels} />
         </Col>
       </Row>
       <Row>
