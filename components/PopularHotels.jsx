@@ -1,23 +1,22 @@
 "use client";
-import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import HotelProperty from "@/components/HotelProperty";
+import { fetchHotels } from "@/utils/requests";
 
-import hotelProperties from "@/hotels.json";
+const PopularHotels = async ({ searchParams }) => {
+  // 1. async ({ searchParams }): We make this component async so we can use 'await', and it receives the searchParams from the HomePage.
 
-const PopularHotels = () => {
-  const [hotelList, setHotelList] = useState(hotelProperties);
+  const hotels = await fetchHotels();
+  // 2. const hotels = await fetchHotels(): Instead of reading from a local file, we are now calling our helper function which fetches the data directly from our MongoDB database via our API route. This happens on the server.
 
-  const getHotelList = (type) => {
-    if (type === "All") {
-      setHotelList(hotelProperties);
-    } else {
-      const newHotelList = hotelProperties.filter((hotel) => hotel.type === type);
-      setHotelList(newHotelList);
-    }
-  };
+  const typesHotels = ["All", ...new Set(hotels.map((item) => item.type))];
+  // 3. This line creates our array of unique hotel types for the filter buttons, directly from the live data.
 
-  const typesHotels = [...new Set(hotelProperties.map((item) => item.type))];
+  const selectedType = searchParams.type || "All";
+  // 4. We check the URL to see if a filter is active.
+
+  const filteredHotels = selectedType === "All" ? hotels : hotels.filter((hotel) => hotel.type === selectedType);
+  // 5. And here we filter our hotels array on the server before sending it to the browser.
 
   return (
     <Container
@@ -29,14 +28,6 @@ const PopularHotels = () => {
           <h2 className="title">Popular Hotels</h2>
         </Col>
         <Col className="hotel-types-buttons">
-          <button
-            className="type-button"
-            onClick={() => {
-              getHotelList("All");
-            }}
-          >
-            All
-          </button>
           {typesHotels.map((item, index) => (
             <button
               className="type-button"
@@ -51,7 +42,7 @@ const PopularHotels = () => {
         </Col>
       </Row>
       <Row>
-        {hotelList.map((hotel) => (
+        {filteredHotels.map((hotel) => (
           <Col
             className="col"
             key={hotel._id}

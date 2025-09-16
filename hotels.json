@@ -1,6 +1,5 @@
 [
   {
-    "_id": "1",
     "owner": "1",
     "name": "Wyatt Residency",
     "type": "Hotel",
@@ -24,7 +23,6 @@
     "updatedAt": "2024-02-15T00:00:00.000Z"
   },
   {
-    "_id": "2",
     "owner": "1",
     "name": "The Parisian Dream",
     "type": "Hotel",
@@ -48,7 +46,6 @@
     "updatedAt": "2024-03-10T00:00:00.000Z"
   },
   {
-    "_id": "3",
     "owner": "2",
     "name": "Tokyo Grand Hotel",
     "type": "Hotel",
@@ -72,7 +69,6 @@
     "updatedAt": "2024-04-20T00:00:00.000Z"
   },
   {
-    "_id": "4",
     "owner": "2",
     "name": "Sydney Harbour View",
     "type": "Hotel",
@@ -96,7 +92,6 @@
     "updatedAt": "2024-05-05T00:00:00.000Z"
   },
   {
-    "_id": "5",
     "owner": "3",
     "name": "Nile Serenity Hotel",
     "type": "Hotel",
@@ -120,7 +115,6 @@
     "updatedAt": "2024-06-18T00:00:00.000Z"
   },
   {
-    "_id": "6",
     "owner": "3",
     "name": "The Londoner Royal",
     "type": "Hotel",
@@ -144,7 +138,6 @@
     "updatedAt": "2024-07-22T00:00:00.000Z"
   },
   {
-    "_id": "7",
     "owner": "4",
     "name": "Rio Beachfront Oasis",
     "type": "Resort",
@@ -168,7 +161,6 @@
     "updatedAt": "2024-08-01T00:00:00.000Z"
   },
   {
-    "_id": "8",
     "owner": "4",
     "name": "Dubai Modern Spire",
     "type": "Hotel",
@@ -192,7 +184,6 @@
     "updatedAt": "2024-09-15T00:00:00.000Z"
   },
   {
-    "_id": "9",
     "owner": "5",
     "name": "Bangkok City Temple",
     "type": "Hotel",
@@ -216,7 +207,6 @@
     "updatedAt": "2024-10-10T00:00:00.000Z"
   },
   {
-    "_id": "10",
     "owner": "5",
     "name": "The Manhattan Sky",
     "type": "Hotel",
