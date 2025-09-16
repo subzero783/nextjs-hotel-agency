@@ -3,11 +3,13 @@ import Hero from "@/components/Hero";
 import PopularHotels from "@/components/PopularHotels";
 
 const HomePage = ({ searchParams }) => {
+  const selectedType = searchParams.type || "All";
+
   return (
     <>
       <Hero />
       <Features />
-      <PopularHotels searchParams={searchParams} />
+      <PopularHotels selectedType={selectedType} />
     </>
   );
 };

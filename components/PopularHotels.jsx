@@ -3,7 +3,7 @@ import HotelProperty from "@/components/HotelProperty";
 import HotelFilterButtons from "./HotelFilterButtons";
 import { fetchHotels } from "@/utils/requests";
 
-const PopularHotels = async ({ searchParams }) => {
+const PopularHotels = async ({ selectedType }) => {
   // 1. async ({ searchParams }): We make this component async so we can use 'await', and it receives the searchParams from the HomePage.
 
   const hotels = await fetchHotels();
@@ -12,11 +12,8 @@ const PopularHotels = async ({ searchParams }) => {
   const typesHotels = ["All", ...new Set(hotels.map((item) => item.type))];
   // 3. This line creates our array of unique hotel types for the filter buttons, directly from the live data.
 
-  const selectedType = (await searchParams.type) || "All";
-  // 4. We check the URL to see if a filter is active.
-
   const filteredHotels = selectedType === "All" ? hotels : hotels.filter((hotel) => hotel.type === selectedType);
-  // 5. And here we filter our hotels array on the server before sending it to the browser.
+  // 4. And here we filter our hotels array on the server before sending it to the browser.
 
   return (
     <Container
